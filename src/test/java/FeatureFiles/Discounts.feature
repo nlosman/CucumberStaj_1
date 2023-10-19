@@ -1,7 +1,10 @@
 Feature: Arrange Discounts Functionality
 
-  Scenario: Add Discount
+  Background: Given Navigate to Campus
+    When Enter username and password and click and click clicklogin button
     Given Navigate to Discount
+
+  Scenario: Add Discount
     When Click to add button
     Then Should be open the New Discount toolbar
     When Craete a new discount description as "test" integration code as "test123" priority as "1"  and click to save button
