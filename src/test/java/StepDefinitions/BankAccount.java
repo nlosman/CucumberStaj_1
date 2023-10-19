@@ -21,7 +21,7 @@ public class BankAccount {
     public void craeteABankAccountNameAsIBANAsCurrencyAsCodeAsAndClickToSaveButton(String arg0, String arg1, String arg2, String arg3) {
     }
 
-    @Then("Succes message should be displayed")
-    public void succesMessageShouldBeDisplayed() {
+    @Then("Success message should be displayed")
+    public void successMessageShouldBeDisplayed() {
     }
 }
