@@ -1,0 +1,1 @@
+Feature: School Locations functionality
