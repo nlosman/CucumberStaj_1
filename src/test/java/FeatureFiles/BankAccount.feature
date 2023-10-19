@@ -5,7 +5,7 @@ Feature: Bank Account Functionality
     When Click to add button
     Then should be open the add Bank account toolbar
     When Craete a bank account name as "test" IBAN as "testIban" currency as "curency" code as "code" and click to save button
-    Then Succes message should be displayed
+    Then Success message should be displayed
 
 
 #  Scenario: Edit bank account
