@@ -1,35 +1,72 @@
 package StepDefinitions;
 
+import Pages.Content;
+import Pages.Side;
+import Utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 
 public class DiscountStep {
+
+    Side sd = new Side();
+    Content ct=new Content();
     @Given("Navigate to Discount")
     public void navigateToDiscount() {
-    }
 
+        sd.myClick(sd.setup);
+        sd.myClick(sd.parameters);
+        sd.myClick(sd.discounts);
+
+    }
     @Then("Should be open the New Discount toolbar")
     public void shouldBeOpenTheNewDiscountToolbar() {
-    }
+    ct.verifyToolbarOpened(ct.toolbarName, "New Discount");
 
-    @When("Craete a new discount description as {string} integration code as {string} priority as {string}  and click to save button")
-    public void craeteANewDiscountDescriptionAsIntegrationCodeAsPriorityAsAndClickToSaveButton(String arg0, String arg1, String arg2) {
+    }
+    @When("Create a new discount description as {string} integration code as {string} priority as {string}  and click to save button")
+    public void createANewDiscountDescriptionAsIntegrationCodeAsPriorityAsAndClickToSaveButton(String arg0, String arg1, String arg2) {
+        ct.mySendKeys(ct.descriptionInput, arg0);
+        ct.mySendKeys(ct.integrationCodeInput, arg1);
+        ct.mySendKeys(ct.priorityInput, arg2);
+        new Actions(Driver.getDriver()).sendKeys(Keys.ENTER).build().perform();
+        ct.myClick(ct.saveButton);
+
     }
 
     @When("Click to edit button")
     public void clickToEditButton() {
+        ct.myClick(ct.editButton);
     }
 
     @Then("Should be open the Discount toolbar")
     public void shouldBeOpenTheDiscountToolbar() {
+        ct.verifyToolbarOpened(ct.toolbarName, "Discount");
     }
-
-    @When("Click to delete button")
+    @Then("Click to delete button")
     public void clickToDeleteButton() {
+        ct.myClick(ct.deleteButton_1);
+        ct.myClick(ct.deleteButton_2);
     }
 
-    @Then("Should be open the Delete toolbar and click to delete button")
-    public void shouldBeOpenTheDeleteToolbarAndClickToDeleteButton() {
+    @When("Write description as {string} and integration code as {string} and click to search button")
+    public void writeDescriptionAsAndIntegrationCodeAsAndClickToSearchButton(String arg0, String arg1) {
+        ct.mySendKeys(ct.searchDescription, arg0);
+        ct.mySendKeys(ct.searchIntegrationCode, arg1);
+        ct.myClick(ct.searchButton);
+
+    }
+    @When("Edit a discount description as {string} integration code as {string} priority as {string}  and click to save button")
+    public void editADiscountDescriptionAsIntegrationCodeAsPriorityAsAndClickToSaveButton(String arg0, String arg1, String arg2) {
+        ct.mySendKeys(ct.descriptionInput, arg0);
+        ct.mySendKeys(ct.integrationCodeInput, arg1);
+        ct.mySendKeys(ct.priorityInput, arg2);
+        new Actions(Driver.getDriver()).sendKeys(Keys.ENTER).build().perform();
+        ct.myClick(ct.saveButton);
     }
 }
