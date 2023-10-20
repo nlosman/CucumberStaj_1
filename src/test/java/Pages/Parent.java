@@ -29,7 +29,7 @@ public class Parent {
     }
 
     public void mySendKeys(WebElement element, String str) {
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+        wait.until(ExpectedConditions.visibilityOf(element));
         scrollToElement(element);
         element.clear();
         element.sendKeys(str);
@@ -40,6 +40,12 @@ public class Parent {
         Assert.assertTrue(element.getText().toLowerCase().contains(str.toLowerCase()));
 
         new Actions(Driver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+    }
+
+    public void verifyToolbarOpened(WebElement element, String str) {
+        wait.until(ExpectedConditions.textToBePresentInElement(element, str));
+        Assert.assertTrue(element.getText().toLowerCase().contains(str.toLowerCase()));
+
     }
 
     public void myJsClick(WebElement element){
