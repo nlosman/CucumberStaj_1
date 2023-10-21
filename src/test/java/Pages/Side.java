@@ -20,6 +20,11 @@ public class Side extends Parent {
     @FindBy(xpath = "(//span[text()='Discounts'])[1]")
     public WebElement discounts;
 
+    @FindBy(xpath = "(//span[text()='Nationalities'])[1]")
+    public WebElement nationalities;
+
+
+
 
 
 

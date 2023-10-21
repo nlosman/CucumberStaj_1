@@ -4,6 +4,7 @@ import Utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class Content extends Parent {
 
@@ -46,6 +47,10 @@ public class Content extends Parent {
     @FindBy(xpath="//ms-search-button//button")
     public WebElement searchButton;
 
+    public void staleElement(){
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+    }
+
     @FindBy(xpath = "//ms-edit-button//button")
     public WebElement editButton;
 
@@ -54,6 +59,20 @@ public class Content extends Parent {
 
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteButton_2;
+
+    @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
+    public WebElement nationalityNameInput;
+
+    @FindBy(xpath = "//input[@data-placeholder='Name']")
+    public WebElement searchNationalityName;
+
+
+
+
+
+
+
+
 
 
 

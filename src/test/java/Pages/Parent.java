@@ -2,6 +2,7 @@ package Pages;
 
 import Utilities.Driver;
 import com.sun.javafx.applet.ExperimentalExtensions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -38,9 +39,8 @@ public class Parent {
     public void verifyContainsText(WebElement element, String str) {
         wait.until(ExpectedConditions.textToBePresentInElement(element, str));
         Assert.assertTrue(element.getText().toLowerCase().contains(str.toLowerCase()));
+        new Actions(Driver.getDriver()).sendKeys(Keys.ESCAPE).build().perform(); }
 
-        new Actions(Driver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
-    }
 
     public void verifyToolbarOpened(WebElement element, String str) {
         wait.until(ExpectedConditions.textToBePresentInElement(element, str));
@@ -54,5 +54,7 @@ public class Parent {
         JavascriptExecutor js=(JavascriptExecutor)Driver.getDriver();
         js.executeScript("arguments[0].click();", element);
     }
+
+
 
 }
