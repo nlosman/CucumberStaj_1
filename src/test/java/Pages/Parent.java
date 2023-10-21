@@ -1,7 +1,7 @@
 package Pages;
 
 import Utilities.Driver;
-import com.sun.javafx.applet.ExperimentalExtensions;
+//import com.sun.javafx.applet.ExperimentalExtensions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

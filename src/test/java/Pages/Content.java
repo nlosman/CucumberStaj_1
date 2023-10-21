@@ -21,5 +21,13 @@ public class Content extends Parent {
     @FindBy(css = "span[class='mat-mdc-tooltip-trigger logo-text']")
     public WebElement textTechnoStudy;
 
+    @FindBy(css = "span[class='mat-mdc-button-touch-target")
+    public WebElement Addbutton;
+
+    @FindBy(css = "div[class=mat-form-field-infix ng-tns-c2794762957")
+    public WebElement Nameinput;
+    @FindBy(css = "span[style='visibility:visible;']")
+    public WebElement Savebutton;
+
 
 }
