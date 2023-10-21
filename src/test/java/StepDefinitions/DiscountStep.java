@@ -7,9 +7,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 public class DiscountStep {
@@ -24,11 +26,7 @@ public class DiscountStep {
         sd.myClick(sd.discounts);
 
     }
-    @Then("Should be open the New Discount toolbar")
-    public void shouldBeOpenTheNewDiscountToolbar() {
-    ct.verifyToolbarOpened(ct.toolbarName, "New Discount");
 
-    }
     @When("Create a new discount description as {string} integration code as {string} priority as {string}  and click to save button")
     public void createANewDiscountDescriptionAsIntegrationCodeAsPriorityAsAndClickToSaveButton(String arg0, String arg1, String arg2) {
         ct.mySendKeys(ct.descriptionInput, arg0);
@@ -41,18 +39,19 @@ public class DiscountStep {
 
     @When("Click to edit button")
     public void clickToEditButton() {
+        ct.staleElement();
         ct.myClick(ct.editButton);
     }
 
-    @Then("Should be open the Discount toolbar")
+    @Then("Should be open the discount toolbar")
     public void shouldBeOpenTheDiscountToolbar() {
         ct.verifyToolbarOpened(ct.toolbarName, "Discount");
     }
     @Then("Click to delete button")
     public void clickToDeleteButton() {
+        ct.staleElement();
         ct.myClick(ct.deleteButton_1);
-        ct.myClick(ct.deleteButton_2);
-    }
+        ct.myClick(ct.deleteButton_2);    }
 
     @When("Write description as {string} and integration code as {string} and click to search button")
     public void writeDescriptionAsAndIntegrationCodeAsAndClickToSearchButton(String arg0, String arg1) {
