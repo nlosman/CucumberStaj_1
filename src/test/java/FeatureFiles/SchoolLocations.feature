@@ -2,7 +2,7 @@ Feature: School Locations functionality
 
   Background: Navigate to School Locations
     Given Navigate to Campus
-    When Enter username and password and click and click clicklogin button
+    When Enter username and password and click login button
 
     Then Click on the element in Side
       | setup       |
