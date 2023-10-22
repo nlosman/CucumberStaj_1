@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -66,8 +67,35 @@ public class Content extends Parent {
     @FindBy(xpath = "//input[@data-placeholder='Name']")
     public WebElement searchNationalityName;
 
+
+    @FindBy(css = "[id='ms-text-field-1'][type='text']")
+    public WebElement shortName;
+
+    @FindBy(css = "mat-select[role='combobox'][id='mat-select-4']")
+    public WebElement classroom;
+
+    @FindBy(css = "input[type='text'][inputmode='numeric']")
+    public WebElement capacity;
+
+    @FindBy(css = "[id='ms-text-field-0'][type='text']")
+    public WebElement name;
+
+    @FindBy (xpath = "(//ms-edit-button[@table='true'])[1]")
+    public WebElement editBtnSchoolSetup;
+
+    @FindBy (css = "div[class='mdc-dialog__container'] h3")
+    public WebElement deleteText;
+
+
+
+
+
+
+
+
     @FindBy(css = "span[class='mat-mdc-button-touch-target")
     public WebElement Addbutton;
+
 
     @FindBy(css = "div[class=mat-form-field-infix ng-tns-c2794762957")
     public WebElement Nameinput;

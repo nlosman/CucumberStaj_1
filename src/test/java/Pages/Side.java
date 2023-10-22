@@ -23,13 +23,13 @@ public class Side extends Parent {
     @FindBy(xpath = "(//span[text()='Nationalities'])[1]")
     public WebElement nationalities;
 
-    @FindBy(css = "[class='nav-link-title ng-tns-c2089661534-8 ng-star-inserted']") //f
+    @FindBy(css = "[class='nav-link-title ng-tns-c2089661534-8 ng-star-inserted']")
     public WebElement schoolSetup;
 
-    @FindBy(xpath = "(//span[@class='nav-link-title ng-star-inserted'])[15]") //f
+    @FindBy(xpath = "(//span[@class='nav-link-title ng-star-inserted'])[15]")
     public WebElement locations;
 
-    public WebElement getButtons(String element){ //f
+    public WebElement getButtons(String element){
         switch (element){
 
             case "setup" : return this.setup;
