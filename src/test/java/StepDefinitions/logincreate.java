@@ -22,10 +22,7 @@ public class logincreate {
         c.mySendKeys(c.password,"TechnoStudy123");
         c.myClick(c.loginbuton);
 
-
-
     }
-
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
         c.verifyContainsText(c.textTechnoStudy,"Techno Study");
