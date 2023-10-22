@@ -67,22 +67,22 @@ public class Content extends Parent {
     @FindBy(xpath = "//input[@data-placeholder='Name']")
     public WebElement searchNationalityName;
 
-    @FindBy(css = "[id='ms-text-field-1'][type='text']") //f
+    @FindBy(css = "[id='ms-text-field-1'][type='text']")
     public WebElement shortName;
 
-    @FindBy(css = "mat-select[role='combobox'][id='mat-select-4']") //f
+    @FindBy(css = "mat-select[role='combobox'][id='mat-select-4']")
     public WebElement classroom;
 
-    @FindBy(css = "input[type='text'][inputmode='numeric']") //f
+    @FindBy(css = "input[type='text'][inputmode='numeric']")
     public WebElement capacity;
 
-    @FindBy(css = "[id='ms-text-field-0'][type='text']") //f
+    @FindBy(css = "[id='ms-text-field-0'][type='text']")
     public WebElement name;
 
-    @FindBy (xpath = "(//ms-edit-button[@table='true'])[1]") //f
+    @FindBy (xpath = "(//ms-edit-button[@table='true'])[1]")
     public WebElement editBtnSchoolSetup;
 
-    @FindBy (css = "div[class='mdc-dialog__container'] h3") //f
+    @FindBy (css = "div[class='mdc-dialog__container'] h3")
     public WebElement deleteText;
 
 
