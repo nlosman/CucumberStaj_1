@@ -28,6 +28,7 @@ public class logincreate {
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
-        Assert.assertTrue(c.textTechnoStudy.getText().toLowerCase().contains("TechnoStudy"));
+        c.verifyContainsText(c.textTechnoStudy,"Techno Study");
+
     }
 }
