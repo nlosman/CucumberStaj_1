@@ -1,16 +1,20 @@
 package StepDefinitions;
 
+import Pages.Content;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class BankAccount {
+    Content ct=new Content();
     @Given("Navigate to Bank account")
     public void navigateToBankAccount() {
     }
 
     @When("Click to add button")
     public void clickToAddButton() {
+        ct.myClick(ct.addButton);
+
     }
 
     @Then("should be open the add Bank account toolbar")
@@ -23,5 +27,6 @@ public class BankAccount {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
+        ct.verifyContainsText(ct.successMessage,"success");
     }
 }

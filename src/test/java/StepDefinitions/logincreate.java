@@ -23,7 +23,6 @@ public class logincreate {
         c.myClick(c.loginbuton);
 
 
-
     }
 
     @Then("User should login successfully")
