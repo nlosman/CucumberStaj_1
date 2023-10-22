@@ -43,8 +43,8 @@ public class SchoolLocations {
         cnt.myClick(cnt.addButton);
     }
 
-    @Then("Should be open the discount toolbar for Locations")
-    public void shouldBeOpenTheDiscountToolbarForLocations() {
+    @Then("Should be open the toolbar for Locations")
+    public void shouldBeOpenTheToolbarForLocations() {
         cnt.verifyToolbarOpened(cnt.toolbarName, "Location");
     }
 
@@ -103,4 +103,6 @@ public class SchoolLocations {
                 .build().perform();
 
     }
+
+
 }
