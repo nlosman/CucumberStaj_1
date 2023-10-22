@@ -11,7 +11,6 @@ Feature: Positions Categories Functionality
     Then Success message should be displayed
 
 
-
     When User delete the "<name>"
     Then Success message should be displayed
 

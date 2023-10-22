@@ -37,8 +37,7 @@ public class PositionsCategories {
     }
 
     @When("User delete the {string}")
-    public void userDeleteThe(String arg0) {
-    }
+    public void userDeleteThe(String arg0) {      }
 
 
 }
