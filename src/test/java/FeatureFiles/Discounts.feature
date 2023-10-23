@@ -2,7 +2,7 @@ Feature: Arrange Discounts Functionality
 
   Background:
     Given Navigate to Campus
-    When Enter username and password and click and click clicklogin button
+    When Enter username and password and click login button
     Given Navigate to Discount
 
   Scenario: Add Discount

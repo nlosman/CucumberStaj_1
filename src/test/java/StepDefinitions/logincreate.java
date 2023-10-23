@@ -16,16 +16,13 @@ public class logincreate {
 
     }
 
-    @When("Enter username and password and click and click clicklogin button")
-    public void enterUsernameAndPasswordAndClickAndClickClickloginButton() {
+    @When("Enter username and password and click login button")
+    public void enterUsernameAndPasswordAndClickLoginButton() {
         c.mySendKeys(c.username,"turkeyts");
         c.mySendKeys(c.password,"TechnoStudy123");
         c.myClick(c.loginbuton);
 
-
-
     }
-
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
         c.verifyContainsText(c.textTechnoStudy,"Techno Study");
