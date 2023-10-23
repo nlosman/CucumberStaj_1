@@ -80,17 +80,11 @@ public class Content extends Parent {
     @FindBy(css = "[id='ms-text-field-0'][type='text']")
     public WebElement name;
 
-    @FindBy (xpath = "(//ms-edit-button[@table='true'])[1]")
+    @FindBy(xpath = "(//ms-edit-button[@table='true'])[1]")
     public WebElement editBtnSchoolSetup;
 
-    @FindBy (css = "div[class='mdc-dialog__container'] h3")
+    @FindBy(css = "div[class='mdc-dialog__container'] h3")
     public WebElement deleteText;
-
-
-
-
-
-
 
 
     @FindBy(css = "span[class='mat-mdc-button-touch-target")
@@ -101,6 +95,13 @@ public class Content extends Parent {
     public WebElement Nameinput;
     @FindBy(css = "span[style='visibility:visible;']")
     public WebElement Savebutton;
+    @FindBy(css="span[class='mat-mdc-button-touch-target']")
+    public WebElement Delete1;
+    @FindBy(css="span[class='mdc-button_label']")
+    public WebElement Delete2;
+    @FindBy(css="svg['class='svg-inline-fa fa-flooppy-disk']")
+    public WebElement Savebutton2;
+
 
 
 }

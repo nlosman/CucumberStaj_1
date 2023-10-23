@@ -20,7 +20,8 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class SchoolLocations {
+public class
+SchoolLocations {
 
     Side sde = new Side();
     Content cnt = new Content();

@@ -10,7 +10,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
 public class NationalitiesStep {
-    Side sd = new Side();
+    Side sd =
+            new Side();
     Content ct=new Content();
     @Given("Navigate Nationalities")
     public void navigateNationalities() {

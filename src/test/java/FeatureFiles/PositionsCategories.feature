@@ -7,11 +7,17 @@ Feature: Positions Categories Functionality
     And Navigate to Positions Categories
 
   Scenario:  Create to Positions Categories
-    When Create a Positions Categories name as "<mehmet>"
+    When click to Add button
+    Then should be open the positions toolbar
+    When Create a Positions Categories name as "<mehmet>" and click to save button
     Then Success message should be displayed
 
 
-    When User delete the "<name>"
-    Then Success message should be displayed
+
+  Scenario: Delete Discount
+    When Write name as "Mehmet" and click to search button
+    Then Click to delete button
+    And Success message should be displayed
+
 
 
