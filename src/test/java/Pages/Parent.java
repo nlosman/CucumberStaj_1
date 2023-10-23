@@ -1,11 +1,10 @@
 package Pages;
 
 import Utilities.Driver;
-import com.sun.javafx.applet.ExperimentalExtensions;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -53,6 +52,15 @@ public class Parent {
         scrollToElement(element);
         JavascriptExecutor js=(JavascriptExecutor)Driver.getDriver();
         js.executeScript("arguments[0].click();", element);
+    }
+
+    public void mySelect(WebElement select, WebElement option){
+        wait.until(ExpectedConditions.elementToBeClickable(select));
+        scrollToElement(select);
+        Actions aksiyonlar = new Actions(Driver.getDriver());
+
+        aksiyonlar.moveToElement(select).click().build().perform();
+        aksiyonlar.moveToElement(option).click().build().perform();
     }
 
 
