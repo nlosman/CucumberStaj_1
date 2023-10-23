@@ -2,7 +2,7 @@ Feature: Bank Account Functionality
 
   Background:
     Given Navigate to Campus
-    When Enter username and password and click and click clicklogin button
+    When Enter username and password and click login button
     Then User should login successfully
     Given Navigate to Bank account
       | setup |

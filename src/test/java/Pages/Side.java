@@ -23,6 +23,25 @@ public class Side extends Parent {
     @FindBy(xpath = "(//span[text()='Nationalities'])[1]")
     public WebElement nationalities;
 
+    @FindBy(css = "[class='nav-link-title ng-tns-c2089661534-8 ng-star-inserted']")
+    public WebElement schoolSetup;
+
+    @FindBy(xpath = "(//span[@class='nav-link-title ng-star-inserted'])[15]")
+    public WebElement locations;
+
+    @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
+    public WebElement bankAccount;
+
+    public WebElement getButtons(String element){
+        switch (element){
+
+            case "setup" : return this.setup;
+            case "schoolSetup" : return this.schoolSetup;
+            case "locations" : return this.locations;
+            case "parameters": return this.parameters;
+            case "bankAccount": return this.bankAccount;
+
+        }
 
         return null;
 
