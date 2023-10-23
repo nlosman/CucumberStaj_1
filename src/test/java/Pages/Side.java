@@ -23,6 +23,19 @@ public class Side extends Parent {
     @FindBy(xpath = "(//span[text()='Nationalities'])[1]")
     public WebElement nationalities;
 
+    @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
+    public WebElement bankAccount;
+
+    public WebElement getWebElement(String strElement){
+        switch (strElement){
+            case "setup": return this.setup;
+            case "parameters": return this.parameters;
+            case "bankAccount": return this.bankAccount;
+        }
+
+        return null;
+    }
+
 
 
 
