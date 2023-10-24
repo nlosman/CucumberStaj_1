@@ -48,12 +48,7 @@ public class Side extends Parent {
     }
 
 
-    @FindBy(className = "nav-link-title ng-tns-c3380182179-15 ng-star-inserted")
-    public WebElement HumanRecources;
-    @FindBy(className = "nav-link-title ng-tns-c3380182179-16 ng -star-inserted")
-    public WebElement Setup;
-    @FindBy(className = "nav-link-title ng-star-inserted")
-    public WebElement PositionsCategories;
+
 
 
 
