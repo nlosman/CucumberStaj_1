@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class Content extends Parent {
 
     public Content() {
@@ -48,9 +50,7 @@ public class Content extends Parent {
     @FindBy(xpath = "//ms-search-button//button")
     public WebElement searchButton;
 
-    public void staleElement() {
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
-    }
+    public void staleElement() {wait.until(ExpectedConditions.elementToBeClickable(searchButton));}
 
     @FindBy(xpath = "//ms-edit-button//button")
     public WebElement editButton;
@@ -66,6 +66,24 @@ public class Content extends Parent {
 
     @FindBy(xpath = "//input[@data-placeholder='Name']")
     public WebElement searchNationalityName;
+
+    @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
+    public WebElement nameInput;
+
+    @FindBy(xpath = "//input[@data-placeholder='IBAN']")
+    public WebElement ibanInput;
+
+    @FindBy(xpath="//mat-select[@formcontrolname='currency']")
+    public WebElement currency;
+
+    @FindBy(xpath="//div[@role='listbox']//mat-option[1]")
+    public WebElement currencyOption;
+
+    @FindBy(xpath = "//input[@data-placeholder='name']")
+    public WebElement searchInput;
+
+
+
 
 
     @FindBy(css = "[id='ms-text-field-1'][type='text']")
@@ -101,6 +119,11 @@ public class Content extends Parent {
     public WebElement Delete2;
     @FindBy(css = "svg[class='svg-inline-fa fa-flooppy-disk']")
     public WebElement Savebutton2;
+
+    @FindBy (css = "button[role='switch']")
+    public List<WebElement> activeButtonList;
+
+
 
 
 }

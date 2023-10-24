@@ -3,7 +3,7 @@ Feature: Arrange Nationalities Functionality
 
   Background:
     Given Navigate to Campus
-    When Enter username and password and click and click clicklogin button
+    When Enter username and password and click login button
     Given Navigate Nationalities
 
   Scenario: Add Nationalities
