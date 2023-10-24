@@ -7,14 +7,20 @@ Feature: Positions Categories Functionality
     And Navigate to Positions Categories
 
   Scenario:  Create to Positions Categories
-    When click to Add button
-    Then should be open the positions toolbar
-    When Create a Positions Categories name as "<mehmet>" and click to save button
+    When Click to add button
+    Then Should be open the positions toolbar
+    When Create a Positions Categories name as "testmehmet" and click to save button
     Then Success message should be displayed
 
+  Scenario: Edit Positions Categories
+    When Write positions categories name as "testmehmet" and click to search button
+    Then Click to edit button
+    And Should be open the nationalities toolbar
+    When Edit positions categories name as "testmehmet1" and click to save button
+    Then Success message should be displayed
 
-  Scenario: Delete name
-    When Write name as "mehmet" and click to button
+  Scenario: Delete
+    When Write positions categories name as "testmehmet1" and click to search button
     Then Click to delete button
     And Success message should be displayed
 
