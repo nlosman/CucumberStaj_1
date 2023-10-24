@@ -84,6 +84,9 @@ public class Content extends Parent {
     @FindBy(xpath = "//input[@data-placeholder='name']")
     public WebElement searchInput;
 
+    @FindBy(css = "ms-dialog-content input[data-placeholder='Code']")
+    public WebElement codeInput;
+
 
 
 
