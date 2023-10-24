@@ -10,8 +10,7 @@ public class positionscategories {
     Content c = new Content();
     Side sd = new Side();
     @And("Navigate to Positions Categories")
-    public void navigateToPositionsCategories() {
-        c.myClick(c.);
+    public void navigateToPositionsCategories(){
     }
 
     @Then("Should be open the positions toolbar")
