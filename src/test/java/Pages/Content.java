@@ -50,9 +50,7 @@ public class Content extends Parent {
     @FindBy(xpath = "//ms-search-button//button")
     public WebElement searchButton;
 
-    public void staleElement() {
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
-    }
+    public void staleElement() {wait.until(ExpectedConditions.elementToBeClickable(searchButton));}
 
     @FindBy(xpath = "//ms-edit-button//button")
     public WebElement editButton;
@@ -124,6 +122,11 @@ public class Content extends Parent {
     public WebElement Nameinput;
     @FindBy(css = "span[style='visibility:visible;']")
     public WebElement Savebutton;
+
+    @FindBy (css = "button[role='switch']")
+    public List<WebElement> activeButtonList;
+
+
 
 
 }
