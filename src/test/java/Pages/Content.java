@@ -61,11 +61,8 @@ public class Content extends Parent {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteButton_2;
 
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
-    public WebElement nationalityNameInput;
-
     @FindBy(xpath = "//input[@data-placeholder='Name']")
-    public WebElement searchNationalityName;
+    public WebElement nameInput_2;
 
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     public WebElement nameInput;
