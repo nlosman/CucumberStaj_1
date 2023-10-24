@@ -13,11 +13,13 @@ Feature: Positions Categories Functionality
     Then Success message should be displayed
 
 
-
-  Scenario: Delete Discount
-    When Write name as "Mehmet" and click to search button
+  Scenario: Delete name
+    When Write name as "mehmet" and click to button
     Then Click to delete button
     And Success message should be displayed
+
+
+
 
 
 

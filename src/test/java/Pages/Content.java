@@ -91,17 +91,16 @@ public class Content extends Parent {
     public WebElement Addbutton;
 
 
-    @FindBy(css = "div[class=mat-form-field-infix ng-tns-c2794762957")
+    @FindBy(css = "div[class=mat-form-field-infix ng-tns-c2794762957-77")
     public WebElement Nameinput;
     @FindBy(css = "span[style='visibility:visible;']")
     public WebElement Savebutton;
-    @FindBy(css="span[class='mat-mdc-button-touch-target']")
+    @FindBy(css = "span[class='mat-mdc-button-touch-target']")
     public WebElement Delete1;
-    @FindBy(css="span[class='mdc-button_label']")
+    @FindBy(css = "span[class='mdc-button_label']")
     public WebElement Delete2;
-    @FindBy(css="svg['class='svg-inline-fa fa-flooppy-disk']")
+    @FindBy(css = "svg[class='svg-inline-fa fa-flooppy-disk']")
     public WebElement Savebutton2;
-
 
 
 }

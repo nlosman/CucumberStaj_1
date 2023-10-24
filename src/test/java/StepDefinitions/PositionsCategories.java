@@ -43,11 +43,13 @@ public class PositionsCategories {
 
     }
 
-    @When("User delete the {string}")
-    public void userDeleteThe(String arg0) {
+    @When("Write name as {string} and click to button")
+    public void writeNameAsAndClickToButton(String arg0) {
+        c.mySendKeys(c.Nameinput, "argo");
         c.myClick(c.Delete2);
-
-
     }
+
+
+
 
 }
