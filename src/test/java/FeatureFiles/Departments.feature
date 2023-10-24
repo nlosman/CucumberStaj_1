@@ -7,23 +7,23 @@ Feature: SchoolSetupDepartments Functionality
 
     And Click on the element in Side
 
-      | setup |
+      | setup       |
       | schoolSetup |
       | departments |
 
   Scenario: School Departments Setup
 
     Then Click to add button
-    And Write name as "Math Department"
-    And Write code as "MT"
+    And Write name as "Math Departmenttt"
+    And Write code as "MTD"
     And Click to Save button
     Then Success message should be displayed
 
     When Click to edit button in School Setup
-    Then Edit a name as "Math" code as "mth"
+    Then Edit a name as "Mathhad" code as "mthhad"
     And Click to Save button
     And Success message should be displayed
 
-    Then Click to delete button
+    Then Click to delete button in departments
     And Success message should be displayed
 

@@ -14,7 +14,7 @@ public class SchoolSetupDepartments {
     @And("Write name as {string}")
     public void writeNameAs(String arg0) {
 
-        ct.mySendKeys(ct.nameInput,arg0);
+        ct.mySendKeys(ct.nameInput, arg0);
     }
 
     @And("Write code as {string}")
@@ -27,8 +27,15 @@ public class SchoolSetupDepartments {
     @Then("Edit a name as {string} code as {string}")
     public void editANameAsCodeAs(String arg0, String arg1) {
         ct.nameInput.clear();
-        ct.mySendKeys(ct.nameInput,arg0);
-        ct.mySendKeys(ct.codeInput,arg1);
+        ct.mySendKeys(ct.nameInput, arg0);
+        ct.mySendKeys(ct.codeInput, arg1);
+
+    }
+
+    @Then("Click to delete button in departments")
+    public void clickToDeleteButtonInDepartments() {
+        ct.myClick(ct.deleteButton_1);
+        ct.myClick(ct.deleteButton_2);
 
     }
 }
