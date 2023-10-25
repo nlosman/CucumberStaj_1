@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.Content;
 import Pages.Side;
+import Utilities.Driver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,7 +32,7 @@ public class BankAccount {
 
     @Then("Should be open the add Bank account toolbar")
     public void shouldBeOpenTheAddBankAccountToolbar() {
-//        content.verifyContainsText(content.toolbarName, "Bank");
+//        content.verifyToolbarOpened(content.toolbarName, "Bank");
     }
 
     @When("Create a bank account name as {string} IBAN as {string} code as {string} and click to save button")
