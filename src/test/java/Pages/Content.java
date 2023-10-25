@@ -123,6 +123,11 @@ public class Content extends Parent {
     @FindBy (css = "button[role='switch']")
     public List<WebElement> activeButtonList;
 
+    @FindBy(xpath="//mat-select[@formcontrolname='type']")
+    public WebElement fieldType;
+
+
+
 
 
 
