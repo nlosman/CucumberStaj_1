@@ -20,7 +20,7 @@ Feature: Positions Categories Functionality
     Then Success message should be displayed
 
   Scenario: Delete
-    When Write positions categories name as "testmehmet1" and click to search button
+    When Write positions categories name as "testmehmet1" and click to search Button
     Then Click to delete button
     And Success message should be displayed
 
