@@ -13,8 +13,8 @@ public class positionscategories {
     public void navigateToPositionsCategories(){
     }
 
-    @Then("Should be open the positions toolbar")
-    public void shouldBeOpenThePositionsToolbar() {
+    @Then("Should be open the positions categories toolbar")
+    public void shouldBeOpenThePositionsCategoriesToolbar() {
     }
 
     @When("Create a Positions Categories name as {string} and click to save button")
