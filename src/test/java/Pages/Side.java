@@ -51,6 +51,9 @@ public class Side extends Parent {
 
     }
 
+    @FindBy(xpath = "(//span[text()='Fields'])[1]")
+    public WebElement fields;
+
 
 
 
