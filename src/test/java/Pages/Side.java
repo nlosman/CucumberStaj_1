@@ -35,6 +35,17 @@ public class Side extends Parent {
     @FindBy(xpath = "//span[text()='Departments']")
     public WebElement departments;
 
+    @FindBy(css= "[class='nav-link-title ng-tns-c2089661534-21 ng-star-inserted']")
+    public WebElement education;
+
+    @FindBy(css = "[class='ng-tns-c2089661534-22 ng-tns-c2089661534-21 nav-collapsable nav-item ng-star-inserted']")
+    public WebElement educationStp;
+
+    @FindBy(xpath= "//*[text()='Subject Categories']")
+    public WebElement educationSubjectCategories;
+
+   
+
     public WebElement getButtons(String element){
         switch (element){
 
@@ -44,6 +55,9 @@ public class Side extends Parent {
             case "parameters": return this.parameters;
             case "bankAccount": return this.bankAccount;
             case "departments": return this.departments;
+            case "education" : return this.education;
+            case "educationStp" : return this.educationStp;
+            case "educationSubjectCategories" : return this.educationSubjectCategories;
 
         }
 
