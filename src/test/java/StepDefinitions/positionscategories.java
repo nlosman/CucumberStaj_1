@@ -48,5 +48,10 @@ public class positionscategories {
     }
 
 
+
+    @Then("Click to delete Button")
+    public void clickToDeleteButton() {
+        c.myClick(c.deleteButton_2);
+    }
 }
 

@@ -19,9 +19,9 @@ Feature: Positions Categories Functionality
     When Edit positions categories name as "testmehmet1" and click to save button
     Then Success message should be displayed
 
-  Scenario: Delete
-    When Write positions categories name as "testmehmet1" and click to search Button
-    Then Click to delete button
+  Scenario: Delete Positions Categories
+    When Write positions categories name as "testmehmet1" and click to search button
+    Then Click to delete Button
     And Success message should be displayed
 
 
