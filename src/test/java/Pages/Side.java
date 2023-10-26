@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 public class Side extends Parent {
 
 
+    public WebElement HumanResources;
+
     public Side() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -56,6 +58,14 @@ public class Side extends Parent {
     public WebElement PositionsCategories;
 
 
+   @FindBy(xpath = "//span[text()='Positions']")
+   public WebElement Positions;
 
 
 }
+
+
+
+
+
+
