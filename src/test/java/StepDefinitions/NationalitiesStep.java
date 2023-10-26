@@ -10,8 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
 public class NationalitiesStep {
-    Side sd =
-            new Side();
+    Side sd = new Side();
     Content ct=new Content();
     @Given("Navigate Nationalities")
     public void navigateNationalities() {
@@ -28,7 +27,7 @@ public class NationalitiesStep {
 
     @When("Edit a name as {string} and click to save button")
     public void editANameAsAndClickToSaveButton(String arg0) {
-        ct.nameInput.clear();
+
         ct.mySendKeys(ct.nameInput, arg0);
         ct.myClick(ct.saveButton);
 
