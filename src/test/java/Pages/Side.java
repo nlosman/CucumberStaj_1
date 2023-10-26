@@ -12,7 +12,7 @@ public class Side extends Parent {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath="(//span[text()='Setup'])[1]")
+    @FindBy(xpath = "(//span[text()='Setup'])[1]")
     public WebElement setup;
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement parameters;
@@ -35,15 +35,21 @@ public class Side extends Parent {
     @FindBy(xpath = "//span[text()='Departments']")
     public WebElement departments;
 
-    public WebElement getButtons(String element){
-        switch (element){
+    public WebElement getButtons(String element) {
+        switch (element) {
 
-            case "setup" : return this.setup;
-            case "schoolSetup" : return this.schoolSetup;
-            case "locations" : return this.locations;
-            case "parameters": return this.parameters;
-            case "bankAccount": return this.bankAccount;
-            case "departments": return this.departments;
+            case "setup":
+                return this.setup;
+            case "schoolSetup":
+                return this.schoolSetup;
+            case "locations":
+                return this.locations;
+            case "parameters":
+                return this.parameters;
+            case "bankAccount":
+                return this.bankAccount;
+            case "departments":
+                return this.departments;
 
         }
 
@@ -53,11 +59,11 @@ public class Side extends Parent {
 
     @FindBy(xpath = "(//span[text()='Fields'])[1]")
     public WebElement fields;
-
-
-
-
-
-
+    @FindBy(xpath = "//span[text='Human Recourses']")
+    public WebElement HumanRecources;
+    @FindBy(xpath = "//span[text='Setup']")
+    public WebElement Setup;
+    @FindBy(xpath = "//span[text='Positions Categories']")
+    public WebElement PositionsCategories;
 
 }
