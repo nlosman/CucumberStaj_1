@@ -27,22 +27,31 @@ public class Education {
 
     @Then("Should be open the education subject categories  toolbar")
     public void shouldBeOpenTheEducationSubjectCategoriesToolbar() {
-        c.myClick(c.Addbutton);
+        c.verifyToolbarOpened(c.toolbarName,"Subject Category");
+
+    }
+
+    @When("Write name as {string} and  code as {string} and click to search button")
+    public void writeNameAsAndCodeAsAndClickToSearchButton(String arg0, String arg1) {
+        c.mySendKeys(c.nameInput_2,arg0);
+        c.mySendKeys(c.codeInput_2,arg1);
+        c.myClick(c.searchButton);
 
     }
 
     @Then("Create a Location name as {string} code as {string}")
     public void createALocationNameAsCodeAs(String arg0, String arg1) {
-        c.mySendKeys(c.educationSubjectName,arg0);
-        c.mySendKeys(c.educationSubjectCode,arg1);
-        c.myClick(c.educationSave);
-    }
+        c.mySendKeys(c.nameInput,arg0);
+       c.mySendKeys(c.codeInput,arg1);
+        c.myClick(c.saveButton);
 
-    @When("Write name as {string} and  code as {string} and click to search button")
-    public void writeNameAsAndCodeAsAndClickToSearchButton(String arg0, String arg1) {
     }
-
     @When("Edit a name as {string} integration code as {string}  and click to save button")
     public void editANameAsIntegrationCodeAsAndClickToSaveButton(String arg0, String arg1) {
+
+        c.mySendKeys(c.nameInput,arg0);
+        c.mySendKeys(c.codeInput,arg1);
+        c.myClick(c.saveButton);
+
     }
 }

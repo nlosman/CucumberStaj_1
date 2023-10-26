@@ -19,7 +19,7 @@ Feature: Education Functionality
   Scenario: Edit subject categories
     When Write name as "grup16" and  code as "grup16code" and click to search button
     Then Click to edit button
-    And Should be open the discount toolbar
+    And  Should be open the education subject categories  toolbar
     When Edit a name as "newgrup" integration code as "newgrup123"  and click to save button
     Then Success message should be displayed
 

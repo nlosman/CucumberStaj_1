@@ -127,13 +127,16 @@ public class Content extends Parent {
     public WebElement fieldType;
 
 
-    @FindBy(xpath = "//*[@id=\"mat-mdc-dialog-7\"]/div/div/subject-category-dialog/ms-dialog/ms-dialog-content/div/div/mat-form-field")
+    @FindBy(id="//*[@id=\"ms-text-field-4\"]")
     public WebElement educationSubjectName;
 
-    @FindBy(xpath = "//input[@data-placeholder='Code']")
+    @FindBy(id="ms-text-field-5")
     public WebElement educationSubjectCode;
 
     @FindBy(css = "span[class='mat-mdc-button-touch-targetl']")
     public WebElement educationSave;
+
+    @FindBy(xpath = "//input[@data-placeholder='Code']")
+    public WebElement codeInput_2;
 
 }
