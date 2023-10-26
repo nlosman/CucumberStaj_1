@@ -50,9 +50,7 @@ public class Content extends Parent {
     @FindBy(xpath = "//ms-search-button//button")
     public WebElement searchButton;
 
-    public void staleElement() {
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
-    }
+    public void staleElement() {wait.until(ExpectedConditions.elementToBeClickable(searchButton));}
 
     @FindBy(xpath = "//ms-edit-button//button")
     public WebElement editButton;
@@ -63,11 +61,8 @@ public class Content extends Parent {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteButton_2;
 
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
-    public WebElement nationalityNameInput;
-
     @FindBy(xpath = "//input[@data-placeholder='Name']")
-    public WebElement searchNationalityName;
+    public WebElement nameInput_2;
 
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     public WebElement nameInput;
@@ -83,6 +78,9 @@ public class Content extends Parent {
 
     @FindBy(xpath = "//input[@data-placeholder='name']")
     public WebElement searchInput;
+
+    @FindBy(css = "ms-dialog-content input[data-placeholder='Code']")
+    public WebElement codeInput;
 
 
 
@@ -100,27 +98,35 @@ public class Content extends Parent {
     @FindBy(css = "[id='ms-text-field-0'][type='text']")
     public WebElement name;
 
-    @FindBy (xpath = "(//ms-edit-button[@table='true'])[1]")
+    @FindBy(xpath = "(//ms-edit-button[@table='true'])[1]")
     public WebElement editBtnSchoolSetup;
 
-    @FindBy (css = "div[class='mdc-dialog__container'] h3")
+    @FindBy(css = "div[class='mdc-dialog__container'] h3")
     public WebElement deleteText;
-
-
-
-
-
-
 
 
     @FindBy(css = "span[class='mat-mdc-button-touch-target")
     public WebElement Addbutton;
 
 
-    @FindBy(css = "div[class=mat-form-field-infix ng-tns-c2794762957")
+    @FindBy(css = "div[class=mat-form-field-infix ng-tns-c2794762957-77")
     public WebElement Nameinput;
     @FindBy(css = "span[style='visibility:visible;']")
     public WebElement Savebutton;
+    @FindBy(css = "svg[class='svg-inline-fa fa-flooppy-disk']")
+    public WebElement Savebutton2;
+
+    @FindBy (css = "button[role='switch']")
+    public List<WebElement> activeButtonList;
+
+    @FindBy(xpath="//mat-select[@formcontrolname='type']")
+    public WebElement fieldType;
+
+
+
+
+
+
 
 
 }

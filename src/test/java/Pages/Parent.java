@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -62,6 +63,31 @@ public class Parent {
 
         aksiyonlar.moveToElement(select).click().build().perform();
         aksiyonlar.moveToElement(option).click().build().perform();
+    }
+
+    public void mySelectByIndex(WebElement element,  int index) {
+        scrollToElement(element);
+        Select select = new Select(element);
+        select.selectByIndex(index);
+    }
+
+    public void mySelectByValue(WebElement element,  String value) {
+        scrollToElement(element);
+        Select select = new Select(element);
+        select.selectByValue(value);
+    }
+
+    public void hover(WebElement element) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).build().perform();
+    }
+
+    public  void backToPage() {
+        Driver.getDriver().navigate().back();
+    }
+
+    public static int randomChoice(int limit) {
+        return (int) (Math.random()*limit);
     }
 
 
