@@ -123,9 +123,17 @@ public class Content extends Parent {
     public WebElement fieldType;
 
 
+    @FindBy(id="//*[@id=\"ms-text-field-4\"]")
+    public WebElement educationSubjectName;
 
+    @FindBy(id="ms-text-field-5")
+    public WebElement educationSubjectCode;
 
+    @FindBy(css = "span[class='mat-mdc-button-touch-targetl']")
+    public WebElement educationSave;
 
+    @FindBy(xpath = "//input[@data-placeholder='Code']")
+    public WebElement codeInput_2;
 
 
 
