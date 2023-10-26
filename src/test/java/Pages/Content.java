@@ -67,6 +67,9 @@ public class Content extends Parent {
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     public WebElement nameInput;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='shortName']//input")
+    public WebElement shortNameInput;
+
     @FindBy(xpath = "//input[@data-placeholder='IBAN']")
     public WebElement ibanInput;
 
@@ -81,9 +84,6 @@ public class Content extends Parent {
 
     @FindBy(css = "ms-dialog-content input[data-placeholder='Code']")
     public WebElement codeInput;
-
-
-
 
 
     @FindBy(css = "[id='ms-text-field-1'][type='text']")
@@ -113,16 +113,27 @@ public class Content extends Parent {
     public WebElement Nameinput;
     @FindBy(css = "span[style='visibility:visible;']")
     public WebElement Savebutton;
-    @FindBy(css = "span[class='mat-mdc-button-touch-target']")
-    public WebElement Delete1;
-    @FindBy(css = "span[class='mdc-button_label']")
-    public WebElement Delete2;
     @FindBy(css = "svg[class='svg-inline-fa fa-flooppy-disk']")
     public WebElement Savebutton2;
 
     @FindBy (css = "button[role='switch']")
     public List<WebElement> activeButtonList;
 
+    @FindBy(xpath="//mat-select[@formcontrolname='type']")
+    public WebElement fieldType;
+
+
+    @FindBy(id="//*[@id=\"ms-text-field-4\"]")
+    public WebElement educationSubjectName;
+
+    @FindBy(id="ms-text-field-5")
+    public WebElement educationSubjectCode;
+
+    @FindBy(css = "span[class='mat-mdc-button-touch-targetl']")
+    public WebElement educationSave;
+
+    @FindBy(xpath = "//input[@data-placeholder='Code']")
+    public WebElement codeInput_2;
 
 
 

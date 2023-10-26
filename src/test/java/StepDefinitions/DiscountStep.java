@@ -14,7 +14,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
-public class DiscountStep {
+public class
+DiscountStep {
 
     Side sd = new Side();
     Content ct=new Content();

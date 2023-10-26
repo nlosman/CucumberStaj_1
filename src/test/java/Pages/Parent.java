@@ -18,6 +18,7 @@ public class Parent {
 
     public WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
 
+
     public void myClick(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElement(element);
