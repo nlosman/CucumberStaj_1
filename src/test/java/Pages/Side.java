@@ -61,7 +61,7 @@ public class Side extends Parent {
     public WebElement humanrecources;
     @FindBy(xpath = "//span[text='Setup']")
     public WebElement Setup;
-    @FindBy(xpath = "//span[text='Position Categories")
+    @FindBy(xpath = "//span[text='Position Categories']")
     public WebElement positionscategories;
 
 
