@@ -60,6 +60,7 @@ public class Side extends Parent {
 
    @FindBy(xpath = "//span[text()='Positions']")
    public WebElement Positions;
+   //
 
 
 }
