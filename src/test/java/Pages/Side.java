@@ -12,7 +12,7 @@ public class Side extends Parent {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath="(//span[text()='Setup'])[1]")
+    @FindBy(xpath = "(//span[text()='Setup'])[1]")
     public WebElement setup;
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement parameters;
@@ -32,9 +32,13 @@ public class Side extends Parent {
     @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
     public WebElement bankAccount;
 
+    @FindBy(xpath = "(//span[text()='Grade Levels'])[1]")
+    public WebElement gradeLevels;
+
     @FindBy(xpath = "//span[text()='Departments']")
     public WebElement departments;
 
+  
     public WebElement getButtons(String element){
         switch (element){
 
@@ -44,6 +48,7 @@ public class Side extends Parent {
             case "parameters": return this.parameters;
             case "bankAccount": return this.bankAccount;
             case "departments": return this.departments;
+            case "gradeLevels": return this.gradeLevels;
 
         }
 
@@ -51,10 +56,22 @@ public class Side extends Parent {
 
     }
 
+    @FindBy(xpath = "(//span[text()='Fields'])[1]")
+    public WebElement fields;
+    @FindBy(xpath = "(//span[text()='Human Resources'])[1]")
+    public WebElement humanRecources;
+    @FindBy(css = "[class='nav-link ng-tns-c2089661534-16 ng-star-inserted']")
+    public WebElement humanRecourcesSetup;
 
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    public WebElement positionsCategories;
 
-
-
-
+    @FindBy(xpath = "//span[text()='Positions']")
+    public WebElement humanRecourcesPositions;
 
 }
+
+
+
+
+
