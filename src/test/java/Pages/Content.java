@@ -67,6 +67,9 @@ public class Content extends Parent {
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     public WebElement nameInput;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='shortName']//input")
+    public WebElement shortNameInput;
+
     @FindBy(xpath = "//input[@data-placeholder='IBAN']")
     public WebElement ibanInput;
 
@@ -81,9 +84,6 @@ public class Content extends Parent {
 
     @FindBy(css = "ms-dialog-content input[data-placeholder='Code']")
     public WebElement codeInput;
-
-
-
 
 
     @FindBy(css = "[id='ms-text-field-1'][type='text']")
