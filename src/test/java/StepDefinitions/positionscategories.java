@@ -14,15 +14,14 @@ public class positionscategories {
     Side sd = new Side();
     @And("Navigate to Positions Categories")
     public void navigateToPositionsCategories(){
-        sd.myClick(sd.HumanRecources);
-        sd.myClick(sd.Setup);
-        sd.myClick(sd.PositionsCategories);
+        sd.myClick(sd.humanRecources);
+        sd.myClick(sd.humanRecourcesSetup);
+        sd.myClick(sd.positionsCategories);
 
     }
     @When("Create a Positions Categories name as {string} and click to save button")
     public void createAPositionsCategoriesNameAsAndClickToSaveButton(String arg0) {
         c.mySendKeys(c.nameInput, arg0);
-        new Actions(Driver.getDriver()).sendKeys(Keys.ENTER).build().perform();
         c.myClick(c.saveButton);
 
     }
@@ -30,20 +29,20 @@ public class positionscategories {
     public void editPositionsCategoriesNameAsAndClickToSaveButton(String arg1) {
         c.nameInput.clear();
         c.mySendKeys(c.nameInput, arg1);
-        c.myClick(c.Savebutton);
+        c.myClick(c.saveButton);
 
     }
 
     @Then("Should be open the positions categories toolbar")
     public void shouldBeOpenThePositionsCategoriesToolbar() {
-        c.verifyToolbarOpened(c.toolbarName, "Positions Categories");
+        c.verifyToolbarOpened(c.toolbarName, "Position Category");
     }
 
 
     @When("Write positions categories name as {string} and click to search button")
     public void writePositionsCategoriesNameAsAndClickToSearchButton(String arg2) {
         c.mySendKeys(c.nameInput_2, arg2);
-        c.myClick(c.saveButton);
+        c.myClick(c.searchButton);
 
     }
 

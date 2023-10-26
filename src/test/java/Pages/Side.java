@@ -59,11 +59,12 @@ public class Side extends Parent {
 
     @FindBy(xpath = "(//span[text()='Fields'])[1]")
     public WebElement fields;
-    @FindBy(xpath = "//span[text='Human Recourses']")
-    public WebElement HumanRecources;
-    @FindBy(xpath = "//span[text='Setup']")
-    public WebElement Setup;
-    @FindBy(xpath = "//span[text='Positions Categories']")
-    public WebElement PositionsCategories;
+    @FindBy(xpath = "(//span[text()='Human Resources'])[1]")
+    public WebElement humanRecources;
+    @FindBy(css = "[class='nav-link ng-tns-c2089661534-16 ng-star-inserted']")
+    public WebElement humanRecourcesSetup;
+
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    public WebElement positionsCategories;
 
 }
