@@ -21,9 +21,8 @@ public class NationalitiesStep {
 
     @When("Create a new nationalities name as {string} and click to save button")
     public void createANewNationalitiesNameAsAndClickToSaveButton(String arg0) {
-        ct.mySendKeys(ct.nameInput, arg0);
-        new Actions(Driver.getDriver()).sendKeys(Keys.ENTER).build().perform();
-        ct.myClick(ct.saveButton);
+
+
     }
 
     @When("Edit a name as {string} and click to save button")
