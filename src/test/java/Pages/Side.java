@@ -32,24 +32,23 @@ public class Side extends Parent {
     @FindBy(xpath = "(//span[text()='Bank Accounts'])[1]")
     public WebElement bankAccount;
 
+    @FindBy(xpath = "(//span[text()='Grade Levels'])[1]")
+    public WebElement gradeLevels;
+
     @FindBy(xpath = "//span[text()='Departments']")
     public WebElement departments;
 
-    public WebElement getButtons(String element) {
-        switch (element) {
+  
+    public WebElement getButtons(String element){
+        switch (element){
 
-            case "setup":
-                return this.setup;
-            case "schoolSetup":
-                return this.schoolSetup;
-            case "locations":
-                return this.locations;
-            case "parameters":
-                return this.parameters;
-            case "bankAccount":
-                return this.bankAccount;
-            case "departments":
-                return this.departments;
+            case "setup" : return this.setup;
+            case "schoolSetup" : return this.schoolSetup;
+            case "locations" : return this.locations;
+            case "parameters": return this.parameters;
+            case "bankAccount": return this.bankAccount;
+            case "departments": return this.departments;
+            case "gradeLevels": return this.gradeLevels;
 
         }
 

@@ -32,7 +32,7 @@ public class BankAccount {
 
     @Then("Should be open the add Bank account toolbar")
     public void shouldBeOpenTheAddBankAccountToolbar() {
-//        content.verifyToolbarOpened(content.toolbarName, "Bank");
+        content.verifyToolbarOpened(content.toolbarName, "Bank");
     }
 
     @When("Create a bank account name as {string} IBAN as {string} code as {string} and click to save button")
@@ -46,6 +46,7 @@ public class BankAccount {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
+        content.verifyContainsText(content.successMessage,"success");
     }
 
     @When("Edit bank account name as {string} IBAN as {string} code as {string} and click to save button")
