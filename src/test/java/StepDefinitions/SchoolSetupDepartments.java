@@ -5,7 +5,8 @@ import Pages.Side;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class SchoolSetupDepartments {
+public class
+SchoolSetupDepartments {
 
     Side sd = new Side();
     Content ct = new Content();

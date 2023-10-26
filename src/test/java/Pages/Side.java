@@ -12,7 +12,7 @@ public class Side extends Parent {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath="(//span[text()='Setup'])[1]")
+    @FindBy(xpath = "(//span[text()='Setup'])[1]")
     public WebElement setup;
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement parameters;
@@ -35,29 +35,21 @@ public class Side extends Parent {
     @FindBy(xpath = "//span[text()='Departments']")
     public WebElement departments;
 
-    @FindBy(css= "[class='nav-link-title ng-tns-c2089661534-21 ng-star-inserted']")
-    public WebElement education;
+    public WebElement getButtons(String element) {
+        switch (element) {
 
-    @FindBy(css = "[class='ng-tns-c2089661534-22 ng-tns-c2089661534-21 nav-collapsable nav-item ng-star-inserted']")
-    public WebElement educationStp;
-
-    @FindBy(xpath= "//*[text()='Subject Categories']")
-    public WebElement educationSubjectCategories;
-
-   
-
-    public WebElement getButtons(String element){
-        switch (element){
-
-            case "setup" : return this.setup;
-            case "schoolSetup" : return this.schoolSetup;
-            case "locations" : return this.locations;
-            case "parameters": return this.parameters;
-            case "bankAccount": return this.bankAccount;
-            case "departments": return this.departments;
-            case "education" : return this.education;
-            case "educationStp" : return this.educationStp;
-            case "educationSubjectCategories" : return this.educationSubjectCategories;
+            case "setup":
+                return this.setup;
+            case "schoolSetup":
+                return this.schoolSetup;
+            case "locations":
+                return this.locations;
+            case "parameters":
+                return this.parameters;
+            case "bankAccount":
+                return this.bankAccount;
+            case "departments":
+                return this.departments;
 
         }
 
@@ -67,11 +59,12 @@ public class Side extends Parent {
 
     @FindBy(xpath = "(//span[text()='Fields'])[1]")
     public WebElement fields;
+    @FindBy(xpath = "(//span[text()='Human Resources'])[1]")
+    public WebElement humanRecources;
+    @FindBy(css = "[class='nav-link ng-tns-c2089661534-16 ng-star-inserted']")
+    public WebElement humanRecourcesSetup;
 
-
-
-
-
-
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    public WebElement positionsCategories;
 
 }
