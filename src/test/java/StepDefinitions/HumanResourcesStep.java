@@ -39,8 +39,6 @@ public class HumanResourcesStep {
        ct.myClick(ct.searchButton);
     }
 
-    @Then("Then  Should be open the Postion toolbar")
-    public void thenShouldBeOpenThePostionToolbar() {
-    }
+
 
 }
