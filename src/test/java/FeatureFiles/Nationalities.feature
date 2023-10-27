@@ -6,12 +6,14 @@ Feature: Arrange Nationalities Functionality
     When Enter username and password and click login button
     Given Navigate Nationalities
 
+  @Parameters, @Education, @Smoke, @Regression
   Scenario: Add Nationalities
     When Click to add button
     Then Should be open the nationalities toolbar
     When Create a new nationalities name as "Metonya" and click to save button
     Then Success message should be displayed
 
+  @Parameters, @Education, @Smoke, @Regression
   Scenario: Edit Nationalities
     When Write name as "Metonya" and click to search button
     Then Click to edit button
@@ -19,6 +21,7 @@ Feature: Arrange Nationalities Functionality
     When Edit a name as "Minlandiya" and click to save button
     Then Success message should be displayed
 
+  @Parameters, @Education, @Smoke, @Regression
   Scenario: Delete Discount
     When Write name as "Minlandiya" and click to search button
     Then Click to delete button
