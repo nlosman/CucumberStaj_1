@@ -1,5 +1,6 @@
 Feature: SchoolSetupDepartments Functionality
 
+
   Background:
     Given Navigate to Campus
     When Enter username and password and click login button
@@ -11,8 +12,8 @@ Feature: SchoolSetupDepartments Functionality
       | schoolSetup |
       | departments |
 
+  @School, @Departments, @Smoke, @Regression
   Scenario: School Departments Setup
-
     Then Click to add button
     And Write name as "Math Departmenttt"
     And Write code as "MTD"

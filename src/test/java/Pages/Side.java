@@ -59,7 +59,7 @@ public class Side extends Parent {
             case "departments": return this.departments;
             case "gradeLevels": return this.gradeLevels;
             case "education": return this.education;
-            case "educationSetup":  return this.educationSetup;
+            case "educationStp":  return this.educationSetup;
             case "subjectCategories":return this.subjectCategories;
 
         }
@@ -78,6 +78,12 @@ public class Side extends Parent {
 
     @FindBy(xpath = "//span[text()='Positions']")
     public WebElement humanRecourcesPositions;
+
+    @FindBy(xpath = "//span[text()='Attestations']")
+    public WebElement attestations;
+
+    @FindBy(xpath = "(//span[text()='Document Types'])[1]")
+    public WebElement documentTypes;
 
 }
 

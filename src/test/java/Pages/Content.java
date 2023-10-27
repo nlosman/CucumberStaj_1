@@ -52,6 +52,7 @@ public class Content extends Parent {
 
     public void staleElement() {wait.until(ExpectedConditions.elementToBeClickable(searchButton));}
 
+
     @FindBy(xpath = "//ms-edit-button//button")
     public WebElement editButton;
 
@@ -152,6 +153,12 @@ public class Content extends Parent {
 
     @FindBy(xpath = "//*[tbody]//td[text()='Grade Level']/following-sibling::td[5]//ms-delete-button")
     public WebElement deleteButtonGrade;
+
+    @FindBy(xpath = "//div[contains(text(),'Cannot')]")
+    public WebElement notMessage;
+    @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']")
+    public WebElement stage;
+
 
 
 }
