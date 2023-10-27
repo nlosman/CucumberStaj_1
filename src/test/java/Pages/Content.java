@@ -135,6 +135,23 @@ public class Content extends Parent {
     @FindBy(xpath = "//input[@data-placeholder='Code']")
     public WebElement codeInput_2;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='order']//input")
+    public WebElement orderInput;
+
+    @FindBy(xpath="//mat-select[@formcontrolname='id']")
+    public WebElement nextGrade;
+
+    @FindBy(xpath="//div[@role='listbox']//mat-option[1]")
+    public WebElement nextGradeOption;
+
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='maxApplicationCount']//input")
+    public WebElement maxApplicationCount;
+
+    @FindBy(xpath="//*[tbody]//td[text()='Grade Level']")
+    public WebElement editGrade;
+
+    @FindBy(xpath = "//*[tbody]//td[text()='Grade Level']/following-sibling::td[5]//ms-delete-button")
+    public WebElement deleteButtonGrade;
 
 
 }
