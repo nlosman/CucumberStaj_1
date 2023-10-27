@@ -21,6 +21,9 @@ public class NationalitiesStep {
 
     @When("Create a new nationalities name as {string} and click to save button")
     public void createANewNationalitiesNameAsAndClickToSaveButton(String arg0) {
+        ct.mySendKeys(ct.nameInput, arg0);
+        ct.myClick(ct.saveButton);
+
 
 
     }

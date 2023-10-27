@@ -43,7 +43,7 @@ public class Education {
     public void createALocationNameAsCodeAs(String arg0, String arg1) {
         c.mySendKeys(c.nameInput,arg0);
        c.mySendKeys(c.codeInput,arg1);
-        c.myClick(c.saveButton);
+
 
     }
     @When("Edit a name as {string} integration code as {string}  and click to save button")
